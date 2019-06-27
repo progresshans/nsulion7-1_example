@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for post in post_list.all %}
+        <p>{{ post.title }}</p>
+        <a href="{% url 'detail' post.id %}">더보기</a>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

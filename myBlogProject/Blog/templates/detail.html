@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <p>제목 : {{ post.title }}</p>
+        <p>작성자 : {{ post.user }}</p>
+        <p>내용 : {{ post.content }}</p>
+        <a href="{% url 'updateForm' post.id %}">수정하기</a>
+        <a href="{% url 'delete' post.id %}">삭제하기</a>
+{% endblock %}
